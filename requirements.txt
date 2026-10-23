@@ -12,3 +12,6 @@ plotly==7.1.0
 jupyterlab==4.6.4
 ipykernel==7.4.0
 nbstripout==0.9.1
+
+#Estatística
+scipy>=1.11.0
