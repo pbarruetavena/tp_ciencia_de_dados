@@ -95,11 +95,16 @@ início (ela só roda no Colab; localmente é ignorada):
 ```python
 import os, sys
 if "google.colab" in sys.modules:
-    !git clone -q https://github.com/pbarruetavena/tp_ciencia_de_dados.git
-    %cd tp_ciencia_de_dados
+    # Caminho absoluto: rodar a célula de novo não cria clones aninhados
+    REPO = "/content/tp_ciencia_de_dados"
+    if not os.path.exists(REPO):
+        !git clone -q https://github.com/pbarruetavena/tp_ciencia_de_dados.git {REPO}
+    else:
+        !git -C {REPO} pull -q --ff-only
+    %cd {REPO}
     !pip install -q kagglehub
     !python -m src.download_data
-    sys.path.insert(0, os.getcwd())
+    sys.path.insert(0, REPO)
 ```
 
 - O download (~1 GB) precisa ser refeito a cada sessão nova do Colab.
