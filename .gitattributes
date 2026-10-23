@@ -1,0 +1,3 @@
+# Notebooks de rascunho entram no git sem outputs (evita conflitos).
+# Notebooks em notebooks/final/ mantêm os gráficos para aparecer no GitHub.
+notebooks/exploracao/**/*.ipynb filter=nbstripout
