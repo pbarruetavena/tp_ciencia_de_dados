@@ -1,0 +1,19 @@
+# Dados (baixados com: python -m src.download_data)
+data/
+
+# Ambiente virtual
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editores / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
