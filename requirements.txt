@@ -15,3 +15,6 @@ nbstripout==0.9.1
 
 #Estatística
 scipy>=1.11.0
+
+# Modelagem
+scikit-learn>=1.4
